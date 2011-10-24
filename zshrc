@@ -241,8 +241,7 @@ user-ret(){
         BUFFER="ls"
         zle end-of-line
         zle accept-line
-    elif [[ $BUFFER =~ "^cd\ \.+$" ]] ;then
-        [[ ${#${BUFFER}} -ge 6 ]] && 
+    elif [[ $BUFFER =~ "^cd\ \.\.\.+$" ]] ;then
           BUFFER=${${BUFFER//\./\.\.\/}/\.\.\//}
         zle end-of-line            
         zle accept-line
