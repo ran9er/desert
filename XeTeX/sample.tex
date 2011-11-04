@@ -1,0 +1,28 @@
+\documentclass{myclass}
+\begin{document}
+\title{文档}
+\author{ran9er}
+\date{\today}
+
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{章节}
+\XeTeX\footnote{xltxtra 宏包} 
+
+\section{测试}
+\begin{lstlisting}
+;; 中文注释
+(defun 2list (lst)
+  (if lst
+      (cons
+       (list (car lst)(cadr lst))
+       (2list (cddr lst)))))
+\end{lstlisting}
+
+\end{document}
+% Local Variables:
+% encoding: utf-8-unix
+% End:
